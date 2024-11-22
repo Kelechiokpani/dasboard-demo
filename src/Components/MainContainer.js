@@ -25,17 +25,10 @@ function MainContainer() {
           }}
         >
           <div className="textContainer">
-            <h1>Round Hall</h1>
-            <h2>1.5 ETH</h2>
-            <p>Uploaded by Alexander Vernof</p>
-            <div className="bid">
-              <a href="#" className="button">
-                Bid Now
-              </a>
-              <p>
-                Ending In <span>2d:15h:20m</span>
-              </p>
-            </div>
+            <h1>Emmanuel </h1>
+            <h2>Dashboard Demo</h2>
+            <p>Uploaded by Emmanuel</p>
+
           </div>
         </div>
 

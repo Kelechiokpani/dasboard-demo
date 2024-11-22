@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Menu.css";
 import logo from "../img/logo.png";
 import {
@@ -9,9 +9,12 @@ import {
   FaRegClock,
   FaCog,
   FaSignOutAlt,
+  FaBars,
 } from "react-icons/fa";
 
 function Menu() {
+  const [isOpen, setIsOpen] = useState(true);
+
   useEffect(() => {
     const mainMenuLi = document
       .getElementById("mainMenu")
@@ -25,29 +28,44 @@ function Menu() {
     mainMenuLi.forEach((n) => n.addEventListener("click", changeActive));
   }, []);
 
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+
   return (
-    <menu>
+   
+   <menu className={isOpen ? "open" : "closed"}>
+   {/*<menu className={isOpen ? "open" : "closed"}>*/}
       <img src={logo} alt="" />
 
-      <ul id="mainMenu">
-        <Icon icon={<FaDelicious />} />
-        <Icon icon={<FaShoppingCart />} />
-        <Icon icon={<FaWallet />} />
-        <Icon icon={<FaChartLine />} />
-        <Icon icon={<FaRegClock />} />
-      </ul>
+      <div className="menu-content">
+        <ul id="mainMenu">
+        <Icon icon={<FaDelicious />} title="Delicious" isOpen={isOpen} />
+          <Icon icon={<FaShoppingCart />} title="Cart" isOpen={isOpen} />
+          <Icon icon={<FaWallet />} title="Wallet" isOpen={isOpen} />
+          <Icon icon={<FaChartLine />} title="Analytics" isOpen={isOpen} />
+          <Icon icon={<FaRegClock />} title="History" isOpen={isOpen} />
+        </ul>
 
-      <ul className="lastMenu">
-        <Icon icon={<FaCog />} />
-        <Icon icon={<FaSignOutAlt />} />
-      </ul>
+        <ul className="lastMenu">
+        <Icon icon={<FaCog />} title="Settings" isOpen={isOpen} />
+        <Icon icon={<FaSignOutAlt />} title="Logout" isOpen={isOpen} />
+        </ul>
+      </div>
+
+      <button className="menu-toggle" onClick={toggleMenu}>
+        <FaBars />
+      </button>
     </menu>
   );
 }
-
-const Icon = ({ icon }) => (
+const Icon = ({ icon, title, isOpen }) => (
   <li>
-    <a href="#">{icon}</a>
+    <a href="#">
+      {icon} {isOpen && <span className="title">{title}</span>} 
+    </a>
   </li>
 );
 

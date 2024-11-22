@@ -2,10 +2,18 @@
   width: 100%;
   height: calc(100% - 45px);
   display: flex;
-  padding-top: 15px;
+  padding: 6rem 1rem 1rem 6rem;
+  /*padding-top: 25px;*/
+  /*padding: 20px;*/
+  /*position: relative;*/
+
 }
 
+
+
 .maincontainer .left {
+  /*width: 100%;*/
+
   width: calc(100% - 30%);
   overflow-y: scroll;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -17,16 +25,17 @@
 
 .maincontainer .left .banner {
   height: 260px;
-  background: #03073c;
+  /* background: #03073c; */
   border-radius: 10px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
-  position: relative;
+  /*position: relative;*/
 }
 
 .maincontainer .left .banner .textContainer {
-  position: absolute;
+  /*position: absolute;*/
   bottom: 20px;
   right: 20px;
+  padding: 1rem;
 }
 
 .maincontainer .left .banner .textContainer h1 {
@@ -288,36 +297,12 @@
   font-size: 10px;
 }
 
-@media screen and (max-width: 525px) {
-  .maincontainer {
-    flex-direction: column;
-    height: auto;
-  }
-  .maincontainer .left {
-    width: 100%;
-  }
 
-  .maincontainer .left .banner .textContainer h1 {
-    font-size: 2.5em;
-  }
-
-  .maincontainer .left .cards main .card_main {
-    max-width: 325px;
-  }
-
-  .maincontainer .left .cards .filters .filter_buttons {
-    display: none;
-  }
-
-  .maincontainer .right {
-    width: 100%;
-    padding: unset;
-  }
-}
 
 @media only screen and (min-width: 525px) and (max-width: 950px) {
   .maincontainer {
     height: calc(100% - 25px);
+    width: 100%;
   }
   .maincontainer .left {
     width: calc(100% - 30%);
@@ -353,3 +338,88 @@
     font-size: 8px;
   }
 }
+
+@media screen and (max-width: 525px) {
+  .maincontainer {
+    flex-direction: column;
+    height: auto;
+    width: 122%;
+    /*padding: 2rem 1rem;*/
+    /*margin: 1rem 2rem 1rem 2rem;*/
+    padding: 6rem 1rem 1rem 6rem;
+  }
+  .maincontainer .left {
+    width: 100%;
+  }
+
+  .maincontainer .left .banner .textContainer h1 {
+    font-size: 2.5em;
+  }
+
+  .maincontainer .left .cards main .card_main {
+    max-width: 325px;
+  }
+
+  .maincontainer .left .cards .filters .filter_buttons {
+    display: none;
+  }
+
+  .maincontainer .right {
+    margin-top: 2rem;
+    width: 100%;
+    padding: unset;
+  }
+}
+
+/*@media screen and (max-width: 768px) {*/
+/*  .maincontainer {*/
+/*    flex-direction: column;*/
+/*    height: auto;*/
+/*    !*padding: 3rem 1rem;*!*/
+/*    margin: 1rem 2rem 1rem 40rem;*/
+/*  }*/
+
+/*  .maincontainer .left {*/
+/*    width: 100%;*/
+/*    padding-right: 0;*/
+/*  }*/
+
+/*  .maincontainer .left .cards main .card_main {*/
+/*    max-width: 100%;*/
+/*  }*/
+
+/*  .maincontainer .right {*/
+/*    width: 100%;*/
+/*    padding: 1rem;*/
+/*  }*/
+/*}*/
+
+/*!* Large devices (e.g., desktops) *!*/
+/*@media screen and (max-width: 1024px) {*/
+/*  .maincontainer {*/
+/*    padding: 4rem 1rem;*/
+/*  }*/
+
+/*  .maincontainer .left {*/
+/*    width: 70%;*/
+/*  }*/
+
+/*  .maincontainer .right {*/
+/*    width: 30%;*/
+/*  }*/
+/*}*/
+
+/*!* Extra large devices *!*/
+/*@media screen and (max-width: 1200px) {*/
+/*  .maincontainer {*/
+/*    padding: 4rem 2rem;*/
+/*  }*/
+
+/*  .maincontainer .left {*/
+/*    width: 65%;*/
+/*  }*/
+
+/*  .maincontainer .right {*/
+/*    width: 35%;*/
+/*  }*/
+/*}*/

@@ -1,13 +1,20 @@
 .container {
-  width: calc(100% - 100px);
-  padding: 20px;
-  padding-top: 30px;
+   /*width: calc(100% - 100px);*/
+  width: 100%;
+  /* padding: 20px; */
+  /* padding-top: 30px; */
 }
 
 .topContainer {
+  z-index: 999;
+  width: 100%;
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* box-shadow: 4px 1px 4px 1px #121026; */
+  padding: 15px;
+  background: #fff;
 }
 
 .topContainer .inputBox {
@@ -94,8 +101,9 @@
 
 .profileContainer .profileName {
   font-family: "Roboto", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 14px;
+  color: #121026;
 }
 
 .profileContainer .menuChevron {

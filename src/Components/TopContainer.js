@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { BiSearchAlt } from "react-icons/bi";
-import { FaBell, FaChevronDown } from "react-icons/fa";
+import {FaBell, FaChevronDown, FaDelicious} from "react-icons/fa";
 import women from "../img/women.jpg";
 
 function TopContainer() {
@@ -18,12 +18,16 @@ function TopContainer() {
     });
   }, []);
 
+
   return (
     <div className="topContainer">
       <div className="inputBox">
-        <input type="text" placeholder="Search items, collections" />
+        <i className="profileIcon">
+
+          <FaDelicious style={{fontSize:'30px', color:'#000', marginTop:'5px'}}/>
+        </i>
         <i>
-          <BiSearchAlt />
+          {/*<BiSearchAlt/>*/}
         </i>
       </div>
 
@@ -34,7 +38,7 @@ function TopContainer() {
         <div className="profileImage">
           <img src={women} alt="" />
         </div>
-        <p className="profileName">Olivia Christine</p>
+        <p className="profileName">Emmanuel Kelly</p>
         <i className="menuChevron" id="menuChevron">
           <FaChevronDown />
         </i>
